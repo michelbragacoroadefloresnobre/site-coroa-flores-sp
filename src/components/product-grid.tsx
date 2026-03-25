@@ -80,19 +80,19 @@ function ProductCard({
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-[16px] font-bold text-[#1C1C1C]">
+        <h3 className="line-clamp-2 min-h-[2lh] text-[16px] font-bold text-[#1C1C1C]">
           {product.name}
         </h3>
         <p className="mt-1 text-[15px] font-bold text-[#2D5A3D]">
           {product.price}
         </p>
-        <p className="mt-1.5 text-[14px] leading-snug text-[#6B6B6B]">
+        <p className="mt-1.5 line-clamp-3 text-[14px] leading-snug text-[#6B6B6B]">
           {product.description}
         </p>
 
         <button
           onClick={() => onSelect(product)}
-          className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#2D5A3D] px-5 py-3 text-[14px] font-medium text-white transition-opacity hover:opacity-90"
+          className="mt-auto flex w-full items-center justify-center gap-2 rounded-full bg-[#2D5A3D] px-5 py-3 pt-4 text-[14px] font-medium text-white transition-opacity hover:opacity-90"
         >
           <MessageCircle className="size-4" />
           Ver detalhes e pedir

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { MessageCircle, X } from "lucide-react";
 import { buildWhatsappUrl } from "@/lib/whatsapp";
@@ -171,7 +172,7 @@ export function ProductQuickOrderModal({
     window.open(buildWhatsappUrl(message), "_blank");
   };
 
-  return (
+  return createPortal(
     <div
       ref={overlayRef}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
@@ -195,6 +196,7 @@ export function ProductQuickOrderModal({
             alt={product.name}
             fill
             className="rounded-t-2xl object-contain"
+            sizes="(max-width: 640px) 100vw, 500px"
           />
         </div>
 
@@ -333,6 +335,7 @@ export function ProductQuickOrderModal({
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -11,7 +11,7 @@ const categories = [
 ] as const;
 
 export function CategoryNav() {
-  const [active, setActive] = useState(categories[0].anchor);
+  const [active, setActive] = useState<string>(categories[0].anchor);
 
   function handleClick(anchor: string) {
     setActive(anchor);

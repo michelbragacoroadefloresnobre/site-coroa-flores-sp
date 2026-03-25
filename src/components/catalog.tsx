@@ -55,30 +55,31 @@ function ProductCard({
   onSelect: (product: Product) => void;
 }) {
   return (
-    <div className="group overflow-hidden rounded-xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
+    <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-50">
         <Image
           src={product.image}
           alt={product.name}
           fill
           className="object-contain transition-transform duration-300 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
 
-      <div className="p-5 md:p-6">
-        <h3 className="text-lg font-semibold text-[#1C1C1C]">
+      <div className="flex flex-1 flex-col p-5 md:p-6">
+        <h3 className="line-clamp-2 min-h-[2lh] text-lg font-semibold text-[#1C1C1C]">
           {product.name}
         </h3>
         <p className="mt-1.5 text-[15px] font-semibold text-[#2D5A3D]">
           {product.price}
         </p>
-        <p className="mt-2 text-[14px] leading-snug text-[#6B6B6B]">
+        <p className="mt-2 line-clamp-3 text-[14px] leading-snug text-[#6B6B6B]">
           {product.description}
         </p>
 
         <button
           onClick={() => onSelect(product)}
-          className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#2D5A3D] px-5 py-3 text-[14px] font-medium text-white transition-opacity hover:opacity-90"
+          className="mt-auto flex w-full items-center justify-center gap-2 rounded-full bg-[#2D5A3D] px-5 py-3 pt-4 text-[14px] font-medium text-white transition-opacity hover:opacity-90"
         >
           <MessageCircle className="size-4" />
           Ver detalhes e pedir

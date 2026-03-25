@@ -15,6 +15,7 @@ export function Hero() {
         alt="Coroa de flores brancas"
         fill
         className="object-cover"
+        sizes="100vw"
         priority
       />
 
