@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { buildWhatsappUrl } from "@/lib/whatsapp";
@@ -49,13 +50,15 @@ export function Header() {
     >
       <div className="mx-auto flex h-[68px] max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link
-          href="/"
-          className={`text-lg font-bold whitespace-nowrap transition-colors duration-300 ${
-            solid ? "text-[#1C1C1C]" : "text-white"
-          }`}
-        >
-          Coroa de Flores São Paulo
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/logo.webp"
+            alt="Coroa de Flores São Paulo"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
