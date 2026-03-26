@@ -31,6 +31,17 @@ const CATEGORY_LABELS: Record<string, string> = {
   especiais: "Especiais",
 };
 
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  tradicionais:
+    "Para você que está procurando coroas de flores para velório com pronta entrega e ótimo custo-benefício, compre Coroas Tradicionais.",
+  ouro:
+    "Mais que um gesto, as Coroas de Flores Ouro representam admiração e reverência. Com flores nobres e montagem sofisticada.",
+  platina:
+    "Com um acabamento imponente e visual refinado, as Coroas de Flores Platina oferecem uma homenagem memorável.",
+  diamante:
+    "As Coroas Diamante foram criadas para quem busca uma homenagem única e marcante. Com design imponente, elas expressam admiração e profundo respeito de forma elegante.",
+};
+
 type ProductSize = {
   price: number;
   height: number;
@@ -100,9 +111,16 @@ function CategoryCarousel({
 }) {
   return (
     <div>
-      <h3 className="mb-4 text-2xl font-bold text-[#1C1C1C] md:text-[28px]">
-        {CATEGORY_LABELS[category]}
-      </h3>
+      <div className="mb-6 text-center">
+        <h3 className="text-2xl font-bold text-[#1C1C1C] md:text-[28px]">
+          {CATEGORY_LABELS[category]}
+        </h3>
+        {CATEGORY_DESCRIPTIONS[category] && (
+          <p className="mx-auto mt-2 max-w-2xl text-[15px] leading-relaxed text-[#6B6B6B]">
+            {CATEGORY_DESCRIPTIONS[category]}
+          </p>
+        )}
+      </div>
 
       <Carousel
         opts={{
@@ -184,7 +202,7 @@ export function Catalog() {
           Ver catálogo completo
         </Link>
         <p className="mt-3 text-sm text-[#6B6B6B]">
-          Mais de 20 opções em 5 categorias, de R$ 350 a R$ 1.500.
+          Mais de 30 opções em 4 categorias, de R$ 315 a R$ 3.500.
         </p>
       </div>
 

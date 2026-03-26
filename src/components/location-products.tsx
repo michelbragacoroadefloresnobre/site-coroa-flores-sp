@@ -23,7 +23,7 @@ type Product = {
   sizes: Record<string, ProductSize>
 }
 
-const FEATURED_CATEGORIES = ["tradicionais", "ouro", "diamante", "platina"]
+const FEATURED_CATEGORIES = ["tradicionais", "ouro", "platina", "diamante"]
 
 function getFeaturedProducts(): Product[] {
   const allProducts = products as Product[]

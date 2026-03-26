@@ -38,13 +38,6 @@ const CATEGORIES = [
       "Rosas nacionais e importadas com acabamento sofisticado. Para quem quer ir além do tradicional.",
   },
   {
-    key: "diamante",
-    anchor: "diamante",
-    title: "Diamante",
-    description:
-      "Orquídeas, lírios e rosas importadas em arranjos de luxo. Uma homenagem à altura.",
-  },
-  {
     key: "platina",
     anchor: "platina",
     title: "Platina",
@@ -52,11 +45,11 @@ const CATEGORIES = [
       "Flores nobres importadas em grande escala. O mais alto padrão de elegância e respeito.",
   },
   {
-    key: "especiais",
-    anchor: "especial",
-    title: "Especial",
+    key: "diamante",
+    anchor: "diamante",
+    title: "Diamante",
     description:
-      "Formatos diferenciados como coração, cruz e meia lua. Para homenagens únicas e personalizadas.",
+      "Orquídeas, lírios e rosas importadas em arranjos de luxo. Uma homenagem à altura.",
   },
 ] as const;
 
